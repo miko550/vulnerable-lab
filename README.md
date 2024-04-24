@@ -4,10 +4,10 @@ vulnerable docker lab
 # Setup
 1. clone repo
 ```
-git clone https://github.com/miko550/vulnerable-lab.hit
+git clone https://github.com/miko550/vulnerable-lab.git
 cd vulnerable-lab
 ```
-2. Run docker compose
+2. Start lab
 ```
 docker compose up -d
 ```
@@ -19,11 +19,11 @@ docker compose down
 # Lab Range
 ## Juice Shop
 ```
-http:<vps IP>:3000
+http://<vps IP>:3000
 ```
 ## DVWA
 ```
-http:<vps IP>:8080
+http://<vps IP>:8080
 ```
 ## Metasploitable2
 ```
