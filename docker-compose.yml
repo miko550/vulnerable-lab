@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+                
+    juice-shop:
+        container_name: "juice-shop"
+        image: santosomar/juice-shop
+        restart: unless-stopped
+        ports:
+            - "3000:3000"
+        environment:
+            - NODE_ENV=ctf              
+    dvwa:
+        container_name: "dvwa"
+        image: santosomar/dvwa
+        restart: unless-stopped
+        ports:
+            - "8080:80"
+    metasploitable2:
+        container_name: "metasploitable2"
+        image: cyberacademylabs/metasploitable2
+        restart: unless-stopped
+        networks:
+            websploit:
+                ipv4_address: 10.10.6.10
+
+# network configuration
+networks:
+    websploit:
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 10.10.6.0/24
+                  gateway: 10.10.6.1
