@@ -8,6 +8,7 @@ services:
         ports:
             - "3000:3000"
         environment:
+            - CTF_KEY=4245f25c83351086de2db0a6d93ebaec
             - NODE_ENV=ctf              
     dvwa:
         container_name: "dvwa"
